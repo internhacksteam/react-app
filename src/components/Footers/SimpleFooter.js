@@ -15,36 +15,41 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+/*eslint-disable*/
 import React from "react";
-
 // reactstrap components
-import { Badge, Col } from "reactstrap";
+import {
+  Button,
+  NavItem,
+  NavLink,
+  Nav,
+  Container,
+  Row,
+  Col,
+  UncontrolledTooltip
+} from "reactstrap";
 
-class Labels extends React.Component {
+class SimpleFooter extends React.Component {
   render() {
     return (
       <>
-        <Col lg="5">
-          <h3 className="h4 text-success font-weight-bold mb-5">Labels</h3>
-          <Badge className="text-uppercase" color="primary" pill>
-            Primary
-          </Badge>
-          <Badge className="text-uppercase" color="success" pill>
-            Success
-          </Badge>
-          <Badge className="text-uppercase" color="danger" pill>
-            Danger
-          </Badge>
-          <Badge className="text-uppercase" color="warning" pill>
-            Warning
-          </Badge>
-          <Badge className="text-uppercase" color="info" pill>
-            Info
-          </Badge>
-        </Col>
+        <footer className=" footer">
+          <Container>
+            <hr />
+            <Row className=" align-items-center justify-content-md-between">
+              <Col md="6">
+                <div className=" copyright">
+                  © {new Date().getFullYear()}{" "}
+                    Code &lt; Hopper &gt;
+                  .
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </footer>
       </>
     );
   }
 }
 
-export default Labels;
+export default SimpleFooter;
