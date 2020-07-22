@@ -118,6 +118,9 @@ class DemoNavbar extends React.Component {
         <NavItem className="d-none d-lg-block ml-lg-4">
         <LoginButton/>
         </NavItem>
+        <NavItem>
+        <LogoutButton/>
+        </NavItem>
         </Nav>
         </UncontrolledCollapse>
         </Container>
