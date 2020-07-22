@@ -34,15 +34,25 @@ import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Levels from "views/examples/Levels.js";
 
+import { UserProvider } from './UserContext'
 
 const App = () => {
-  const {isLoading, error} = useAuth0();
+  const {isLoading, user, error} = useAuth0();
+  var userInfo = user
 
   if (error) {
     return <div> Opps... {error.message} </div>;
   }
 
+  if (isLoading){
+    userInfo=""
+  }
+  else{
+    userInfo=user
+  }
+
   return(
+  <UserProvider value={userInfo}>
   <BrowserRouter>
     <Switch>
       <Route
@@ -78,6 +88,7 @@ const App = () => {
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>
+  </UserProvider>
    );
 };
 
