@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { Component }  from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 
@@ -44,15 +44,21 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 import Download from "../IndexSections/Download.js";
 
 import StartButton from "../../components/start-button";
+import UserContext from "../../UserContext";
 
-class Landing extends React.Component {
-  state = {};
+class Landing extends Component {
+
+  static contextType = UserContext
+ // state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
   render() {
+
+    const user = this.context
+    console.log('landing',user)
     return (
       <>
         <DemoNavbar />
@@ -80,7 +86,8 @@ class Landing extends React.Component {
                         <span>&nbsp;</span>
                         <span>&nbsp;</span>
                         <span>&nbsp;</span>
-                        Go on a coding adventure{" "}
+                        
+                        Go on a coding adventure {user.nickname}
                         <span>with iconic women in tech!</span>
                         <span>&nbsp;</span>
                       </h1>

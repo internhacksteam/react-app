@@ -45,10 +45,15 @@ import LevelDisplay from "../IndexSections/LevelDisplay.js";
 
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import Loading from "../../components/Loading";
+import UserContext from "../../UserContext";
 
 class Levels extends React.Component {
-  state = {};
+
+  static context = UserContext
+
   componentDidMount() {
+    const user = this.context
+    console.log(user)
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
