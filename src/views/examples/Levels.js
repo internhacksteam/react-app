@@ -43,6 +43,8 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 import Achievements from "../IndexSections/Achievements.js";
 import LevelDisplay from "../IndexSections/LevelDisplay.js";
 
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import Loading from "../../components/Loading";
 
 class Levels extends React.Component {
   state = {};
@@ -138,4 +140,6 @@ class Levels extends React.Component {
   }
 }
 
-export default Levels;
+export default withAuthenticationRequired(Levels, {
+  onRedirecting: () => <Loading />,
+});
