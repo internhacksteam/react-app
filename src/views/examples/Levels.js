@@ -89,7 +89,7 @@ class Levels extends React.Component {
                               <span>0%</span>
                             </div>
                           </div>
-                          <Progress max="100" value="60" color="success" />
+                          <Progress max="100" value="0" color="success" />
                         </div>
                     </Col>
                     <Col lg="6" md="12">
