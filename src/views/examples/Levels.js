@@ -65,8 +65,8 @@ class Levels extends React.Component {
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-md section-shaped pb-250">
-              <div className="shape shape-style-1 shape-default">
+            <section className="section section-shaped section-lg">
+              <div className="shape shape-style-1 bg-gradient-primary">
                 <span />
                 <span />
                 <span />
@@ -77,36 +77,35 @@ class Levels extends React.Component {
                 <span />
                 <span />
               </div>
-              <Container className="py-lg-md d-flex">
-                <div className="col px-0">
-                  <Row>
-                    <Col lg="6">
+              <Container>
+                <Row>
+                    <Col lg="6" md="8">
                       <div className="progress-wrapper">
                           <div className="progress-info">
                             <div className="progress-label">
-                              <span>Level completed</span>
+                              <span><p>Current Level Completed</p></span>
                             </div>
                             <div className="progress-percentage">
-                              <span>60%</span>
+                              <span>0%</span>
                             </div>
                           </div>
                           <Progress max="100" value="60" color="success" />
                         </div>
-                      </Col>
-                      <Col lg="6">
+                    </Col>
+                    <Col lg="6" md="12">
+                      <div class ="float-right">
                         <Achievements />
-                      </Col>
-
-                      </Row>
-                </div>
+                      </div>
+                    </Col>
+                </Row>
               </Container>
               {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
+              <div className="separator separator-bottom">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="none"
                   version="1.1"
-                  viewBox="0 0 2560 100"
+                  viewBox="0 0 2560 2560"
                   x="0"
                   y="0"
                 >
@@ -117,18 +116,21 @@ class Levels extends React.Component {
                 </svg>
               </div>
             </section>
-            {/* 1st Hero Variation */}
+
           </div>
+           {/* 1st Hero Variation */}
           <section className="section section-lg pt-lg-0 mt--200">
+            
               <Container>
+                
               <span>&nbsp;</span>
             
-                    <h1 className="display-3 text-white">
+                    <h1 className="display-3 text-black">
                       <span>&nbsp;</span>
                       <span>&nbsp;</span>
                       <span>&nbsp;</span>
-                      Go on a coding adventure 
-                      <span>with iconic women in tech! </span>
+                      <span>&nbsp;</span>
+                      Start your journey.
                       <span>&nbsp;</span>
                     </h1>
                     < LevelDisplay />
