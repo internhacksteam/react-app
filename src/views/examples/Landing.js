@@ -43,6 +43,8 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 // index page sections
 import Download from "../IndexSections/Download.js";
 
+import StartButton from "../../components/start-button";
+
 class Landing extends React.Component {
   state = {};
   componentDidMount() {
@@ -83,16 +85,7 @@ class Landing extends React.Component {
                         <span>&nbsp;</span>
                       </h1>
                       <div className="btn-wrapper">
-                        <Button
-                          className="btn-icon mb-3 mb-sm-0"
-                          color="info"
-                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/alerts?ref=adsr-landing-page"
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <i className="fa fa-code" />
-                          </span>
-                          <span className="btn-inner--text">Let's Go</span>
-                        </Button>
+                        <StartButton/>
                       </div>
                     </Col>
                     <Col lg="4" md="5">
