@@ -45,9 +45,8 @@ const App = () => {
   return(
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
       <Route
-        path="/landing-page"
+        path="/"
         exact
         render={props =>  
    <Landing {...props} />}
