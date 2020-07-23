@@ -37,7 +37,8 @@ import {
   Row,
   Col, 
   Form,
-  UncontrolledAlert
+  UncontrolledAlert,
+  CardHeader
 } from "reactstrap";
 
 // core components
@@ -46,9 +47,10 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import Loading from "../../components/Loading";
 import UserContext from "../../UserContext";
 import LessonModal from "../IndexSections/LessonModal.js";
+import Timer from "../IndexSections/Timer.js";
 
 
-class QuestionStart extends React.Component {
+class Question2 extends React.Component {
   static context = UserContext
   componentDidMount() {
     const user = this.context
@@ -64,7 +66,6 @@ class QuestionStart extends React.Component {
           correct: false,
           incorrect: false
     };
-    
     
     handleShow = () => {
       this.setState({ showButton: true });
@@ -96,15 +97,13 @@ class QuestionStart extends React.Component {
       })
   
       let checkAnswer = this.state.output;
-      if (checkAnswer == "Sorry, try again!") {
+      if (checkAnswer == "Sorry, try again") {
         this.setState({ incorrect: true });
       } else {
         this.setState({ showButton: true });
         this.setState({ correct: true });
       }
     }
-    
-    
 
   render() {
     return (
@@ -151,10 +150,13 @@ class QuestionStart extends React.Component {
                 </Col>
                 <Col lg="8" md="7">
                   <Card>
+                    <CardHeader>
+                      <Timer />
+                    </CardHeader>
                     <CardBody>
                       <span>
-                         <p>Hello! My name is <code>Ada Lovelace.</code> Can you print my name into your contact list using
-                        <code> print()</code> ? </p> 
+                         <p>I'm late for my tutoring job! Can you print the phone number  
+                           <code> 123-456-7890</code> for me before the time runs out?</p> 
                          
                       </span>
                       <code>
@@ -180,8 +182,8 @@ class QuestionStart extends React.Component {
                           
                           <div>
                           {this.state.showButton ? 
-                            <Button to="/question2-page" tag={Link}>
-                              Next Question</Button> : null }
+                            <Button to="/levelsafter-page" tag={Link}>
+                              Finish Level</Button> : null }
                           </div>
                       </Row>
                     </CardFooter>
@@ -204,6 +206,6 @@ class QuestionStart extends React.Component {
   }
 }
 
-export default withAuthenticationRequired(QuestionStart, {
+export default withAuthenticationRequired(Question2, {
   onRedirecting: () => <Loading />,
 });

@@ -33,8 +33,10 @@ import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Levels from "views/examples/Levels.js";
+import LevelsAfter from "views/examples/LevelsAfter.js";
+import Map from "views/examples/Map.js";
 import QuestionStart from "views/examples/QuestionStart.js";
-
+import Question2 from "views/examples/Question2.js";
 
 import { UserProvider } from './UserContext'
 
@@ -88,9 +90,27 @@ const App = () => {
       </Auth0ProviderWithHistory>}
       />
       <Route
+        path="/levelsafter-page"
+        exact
+        render={props => <Auth0ProviderWithHistory><LevelsAfter {...props} />
+      </Auth0ProviderWithHistory>}
+      />
+      <Route
         path="/questionstart-page"
         exact
         render={props => <Auth0ProviderWithHistory><QuestionStart {...props} />
+      </Auth0ProviderWithHistory>}
+      />
+      <Route
+        path="/map-page"
+        exact
+        render={props => <Auth0ProviderWithHistory><Map {...props} />
+      </Auth0ProviderWithHistory>}
+      />
+      <Route
+        path="/question2-page"
+        exact
+        render={props => <Auth0ProviderWithHistory><Question2 {...props} />
       </Auth0ProviderWithHistory>}
       />
       <Redirect to="/" />

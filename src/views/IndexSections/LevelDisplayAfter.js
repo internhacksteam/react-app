@@ -26,7 +26,7 @@ class LevelDisplay extends React.Component {
     };
   }
   state = {
-        circledNavPills: 1,
+        circledNavPills: 2,
         levels:[]
       };
   componentDidMount() {

@@ -42,7 +42,7 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 import Achievements from "../IndexSections/Achievements.js";
-import LevelDisplay from "../IndexSections/LevelDisplay.js";
+import LevelDisplayAfter from "../IndexSections/LevelDisplayAfter.js";
 
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import Loading from "../../components/Loading";
@@ -90,15 +90,15 @@ class Levels extends React.Component {
                               <span><p>Current Level Completed</p></span>
                             </div>
                             <div className="progress-percentage">
-                              <span>0%</span>
+                              <span>16%</span>
                             </div>
                           </div>
-                          <Progress max="100" value="0" color="success" />
+                          <Progress max="100" value="16" color="success" />
                         </div>
                     </Col>
                     <Col lg="6" md="12">
                       <div class ="float-right">
-                        <AchievementsEmpty />
+                        <Achievements />
                       </div>
                     </Col>
                 </Row>
@@ -135,7 +135,7 @@ class Levels extends React.Component {
                       <span>&nbsp;</span>
                     </h1>
                     
-                      < LevelDisplay />
+                      < LevelDisplayAfter />
 
                     <span>&nbsp;</span>
                 </Container>

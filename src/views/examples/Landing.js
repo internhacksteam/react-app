@@ -87,8 +87,8 @@ class Landing extends Component {
                         <span>&nbsp;</span>
                         <span>&nbsp;</span>
                         
-                        Go on a coding adventure, {user.nickname},
-                        <span>with iconic women in tech!</span>
+                        Are you ready to go on a coding adventure
+                        <span>with iconic women in tech {user.nickname}? </span>
                         <span>&nbsp;</span>
                       </h1>
                       <div className="btn-wrapper">
@@ -141,18 +141,16 @@ class Landing extends Component {
                       <CardBody>
                         <div className="d-flex px-3">
                           <div>
-                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                            <div className="icon icon-shape icon-shape-success rounded-circle mb-4">
                               <i className="ni ni-planet" />
                             </div>
                           </div>
                           <div className="pl-4">
-                            <h5 className="title text-primary">
+                            <h5 className="title text-default">
                               Travel the world of programming
                             </h5>
                             <p className="description mt-3">
-                              Argon is a great free UI package based on Bootstrap
-                              4 that includes the most important components and
-                              features.
+                              Every coding language is a new location on the map to unlock!
                             </p>
                           </div>
                       </div>
@@ -169,18 +167,17 @@ class Landing extends Component {
                           <CardBody>
                             <div className="d-flex px-3">
                               <div>
-                                <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
                                   <i className="ni ni-planet" />
                                 </div>
                               </div>
                               <div className="pl-4">
-                                <h5 className="title text-primary">
-                                  Travel the world of programming
+                                <h5 className="title text-default">
+                                  Collect cool achievements
                                 </h5>
                                 <p className="description mt-3">
-                                  Argon is a great free UI package based on Bootstrap
-                                  4 that includes the most important components and
-                                  features.
+                                  Get rewarded when you pass levels, and milestones in the story.
+
                                 </p>
                               </div>
                           </div>
@@ -202,13 +199,11 @@ class Landing extends Component {
                                 </div>
                               </div>
                               <div className="pl-4">
-                                <h5 className="title text-primary">
-                                  Travel the world of programming
+                                <h5 className="title text-default">
+                                  Learn to code with stories
                                 </h5>
                                 <p className="description mt-3">
-                                  Argon is a great free UI package based on Bootstrap
-                                  4 that includes the most important components and
-                                  features.
+                                  Play the game as a woman in tech and learn about their life.
                                 </p>
                               </div>
                           </div>
@@ -248,12 +243,10 @@ class Landing extends Component {
                         />
                       </svg>
                       <h4 className="display-3 font-weight-bold text-white">
-                        Design System
+                        Girl power !
                       </h4>
                       <p className="lead text-italic text-white">
-                        The Arctic Ocean freezes every winter and much of the
-                        sea-ice then thaws every summer, and that process will
-                        continue whatever happens.
+                        
                       </p>
                     </blockquote>
                   </Card>
@@ -263,29 +256,18 @@ class Landing extends Component {
                     <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
                       <i className="ni ni-settings" />
                     </div>
-                    <h3>Our customers</h3>
+                    <h3>Our Story</h3>
                     <p className="lead">
-                      Don't let your uses guess by attaching tooltips and
-                      popoves to any element. Just make sure you enable them
-                      first via JavaScript.
+                       Women are important people in tech and you have the ability to learn the skills for a tech career!
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      From the U.S. workforce, only 20% of the people in a technology career are females.
+                      Computer science jobs are high-paying and have many opportunities. 
                     </p>
                     <p>
-                      The kit comes with three pre-built pages to help you get
-                      started faster. You can change the text and images and
-                      you're good to go.
+                      So, we want to empower you, to learn to code, and feel love and support from the tech community. 
+                      
                     </p>
-                    <a
-                      className="font-weight-bold text-warning mt-5"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      A beautiful UI Kit for impactful websites
-                    </a>
                   </div>
                 </Col>
               </Row>
