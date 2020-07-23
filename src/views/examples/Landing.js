@@ -87,7 +87,7 @@ class Landing extends Component {
                         <span>&nbsp;</span>
                         <span>&nbsp;</span>
                         
-                        Go on a coding adventure {user.nickname}
+                        Go on a coding adventure, {user.nickname},
                         <span>with iconic women in tech!</span>
                         <span>&nbsp;</span>
                       </h1>
