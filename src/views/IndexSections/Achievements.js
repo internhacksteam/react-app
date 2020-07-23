@@ -32,7 +32,8 @@ import {
   InputGroup,
   Modal,
   Row,
-  Col
+  Col,
+  UncontrolledTooltip
 } from "reactstrap";
 
 class Achievements extends React.Component {
@@ -45,7 +46,7 @@ class Achievements extends React.Component {
   render() {
     return (
       <>
-          <Col md="5">
+          <Col md="12">
             <Button
               block
               className="mb-3"
@@ -53,7 +54,7 @@ class Achievements extends React.Component {
               type="button"
               onClick={() => this.toggleModal("notificationModal")}
             >
-            Achievements 
+              Achievements 
             </Button>
             <Modal
               className="modal-dialog-centered modal-danger"
@@ -63,7 +64,7 @@ class Achievements extends React.Component {
             >
               <div className="modal-header">
                 <h6 className="modal-title" id="modal-title-notification">
-                  Your attention is required
+                  Check out your cool achievements!
                 </h6>
                 <button
                   aria-label="Close"
@@ -76,19 +77,90 @@ class Achievements extends React.Component {
                 </button>
               </div>
               <div className="modal-body">
+                
                 <div className="py-3 text-center">
-                  <i className="ni ni-bell-55 ni-3x" />
-                  <h4 className="heading mt-4">You should read this!</h4>
-                  <p>
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
-                  </p>
+                  <i className="fa fa-trophy fa-3x" />
                 </div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="twitter"
+                  id="tooltip475038074"
+                  target="_blank"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-flask" />
+                  </span>
+                </Button>
+                <UncontrolledTooltip delay={0} target="tooltip475038074">
+                  Level 1 Completed
+                </UncontrolledTooltip>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="github"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-lock" />
+                  </span>
+                </Button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="github"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-lock" />
+                  </span>
+                </Button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="github"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-lock" />
+                  </span>
+                </Button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="github"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-lock" />
+                  </span>
+                </Button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <Button
+                  className="btn-icon-only rounded-circle"
+                  color="github"
+                >
+                  <span className="btn-inner--icon">
+                    <i className="fa fa-lock" />
+                  </span>
+                </Button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                
               </div>
               <div className="modal-footer">
-                <Button className="btn-white" color="default" type="button">
-                  Ok, Got it
-                </Button>
+                
                 <Button
                   className="text-white ml-auto"
                   color="link"
@@ -98,6 +170,7 @@ class Achievements extends React.Component {
                 >
                   Close
                 </Button>
+                
               </div>
             </Modal>
           </Col>

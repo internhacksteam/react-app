@@ -3924,6 +3924,7 @@ input[type="button"].btn-block {
 
 .alert {
   position: relative;
+  color: blue;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
   border: 0.0625rem solid transparent;

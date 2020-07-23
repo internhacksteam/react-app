@@ -33,6 +33,8 @@ import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Levels from "views/examples/Levels.js";
+import QuestionStart from "views/examples/QuestionStart.js";
+
 
 import { UserProvider } from './UserContext'
 
@@ -83,6 +85,12 @@ const App = () => {
         path="/levels-page"
         exact
         render={props => <Auth0ProviderWithHistory><Levels {...props} />
+      </Auth0ProviderWithHistory>}
+      />
+      <Route
+        path="/questionstart-page"
+        exact
+        render={props => <Auth0ProviderWithHistory><QuestionStart {...props} />
       </Auth0ProviderWithHistory>}
       />
       <Redirect to="/" />

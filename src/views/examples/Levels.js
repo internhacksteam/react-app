@@ -61,7 +61,9 @@ class Levels extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <div>
+          <DemoNavbar />
+        </div>
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
@@ -119,7 +121,7 @@ class Levels extends React.Component {
 
           </div>
            {/* 1st Hero Variation */}
-          <section className="section section-lg pt-lg-0 mt--200">
+          
             
               <Container>
                 
@@ -127,17 +129,13 @@ class Levels extends React.Component {
             
                     <h1 className="display-3 text-black">
                       <span>&nbsp;</span>
-                      <span>&nbsp;</span>
-                      <span>&nbsp;</span>
-                      <span>&nbsp;</span>
-                      Start your journey.
+                      Start your Python journey.
                       <span>&nbsp;</span>
                     </h1>
                     < LevelDisplay />
-  
-  
+                    <span>&nbsp;</span>
                 </Container>
-          </section>
+
         </main>
       
       </>

@@ -49,6 +49,7 @@
   ],
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
+    "axios": "^0.19.2",
     "bootstrap": "4.3.1",
     "classnames": "2.2.6",
     "headroom.js": "0.11.0",
